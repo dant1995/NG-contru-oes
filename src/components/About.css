@@ -1,0 +1,91 @@
+.about-ribbon {
+  background-color: #ffffff;
+  padding: 1rem 0 2rem 0;
+  position: relative;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.about-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 80px; /* Espaço para o martelo decorativo */
+}
+
+.nildo-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nildo-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-nildo::after {
+  content: "FOTO";
+  color: #888;
+  font-weight: bold;
+}
+
+.about-text h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0.2rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #4a4a4a;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.about-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.gallery-thumb {
+  width: 100px;
+  height: 70px;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.floating-hammer {
+  position: absolute;
+  left: -20px;
+  bottom: -40px; /* Sobrepõe o footer/seção abaixo */
+  z-index: 20;
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .about-left {
+    margin-left: 0;
+  }
+  .floating-hammer {
+    display: none; /* Esconde no mobile para não atrapalhar o layout */
+  }
+}
